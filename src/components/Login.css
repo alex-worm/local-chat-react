@@ -1,0 +1,86 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    background-color: #fff;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 55px;
+}
+
+.login-inputs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-inputs input {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #4b2354;
+    line-height: 1.2;
+    height: 62px;
+    background: transparent;
+    padding: 0 20px 0 23px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-inputs input:nth-child(1) {
+    margin-bottom: 20px
+}
+
+.login-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #bd59d4;
+    border-radius: 25px;
+
+    font-family: SourceSansPro-SemiBold, serif;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+
+    box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.5);
+    -moz-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.5);
+    -webkit-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.5);
+    -o-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.5);
+    -ms-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.5);
+}
+
+
+.login-button:hover {
+    background-color: #4b2354;
+    box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.8);
+    -moz-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.8);
+    -webkit-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.8);
+    -o-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.8);
+    -ms-box-shadow: 0 10px 30px 0 rgba(189, 89, 212, 0.8);
+    cursor: pointer;
+}
