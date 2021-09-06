@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
 import './Login.css';
 import M from 'materialize-css';
@@ -8,7 +8,7 @@ const Login = ({onLogin}) => {
     const [userName, setUserName] = useState('');
     const [isLoading, setLoading] = useState(false);
 
-    const onEnter = async () => {
+    const onEnter = useCallback(async () => {
         if (!/\S/.test(roomId) || !/\S/.test(userName)) {
             M.toast({html: 'Wrong Data'});
             return;
@@ -23,7 +23,23 @@ const Login = ({onLogin}) => {
             userName
         });
         onLogin(obj);
-    };
+    }, [roomId, userName, onLogin]);
+
+    useEffect(() => {
+        const onKeypress = (event) => {
+            if (event.key === 'Enter') {
+                onEnter();
+            }
+        }
+
+        document.querySelector('#roomId').addEventListener('keypress', onKeypress);
+        document.querySelector('#yourName').addEventListener('keypress', onKeypress);
+
+        return () => {
+            document.querySelector('#roomId').removeEventListener('keypress', onKeypress);
+            document.querySelector('#yourName').removeEventListener('keypress', onKeypress);
+        }
+    }, [onEnter]);
 
     return (
         <div className="row login-container">

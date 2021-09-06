@@ -1,11 +1,10 @@
-.users-title {
-    margin-bottom: 7px;
+.chat-container {
+    width: 100%;
+    display: flex;
 }
 
 .chat {
     display: flex;
-    width: 80vh;
-    height: 90vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -16,48 +15,57 @@
     -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
     -o-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
     -ms-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
-    padding: 0 0 30px;
+    padding: 0 0 2vw;
 }
 
 .chat-content {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 25px;
+    flex-direction: column;
+}
+
+.chat-users {
+    display: flex;
+    flex-direction: row;
 }
 
 .chat-messages {
     min-width: 70%;
 }
 
+.users-title {
+    line-height: 48px;
+    margin-right: 5px;
+}
+
 .users-view {
     display: flex;
-    flex-direction: column;
+    overflow: scroll;
 }
 
 .user-view {
     display: inline-block;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-    -o-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 1vh;
-    margin-bottom: 13px;
+    margin: 5px;
     padding: 8px 15px;
 }
 
 .messages-box {
     height: 40vh;
-    width: 60vh;
     overflow: auto;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
     -o-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
     -ms-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     border-radius: 2vh;
     padding: 15px;
 }
@@ -70,17 +78,23 @@
 
 .messages-text {
     margin: 0;
-    background-color: mediumpurple;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
     min-width: 80px;
-    color: #fff;
+    max-width: 90%;
     padding: 10px;
     border-radius: 1vh 1vh 1vh 0;
     display: inline-block;
+    word-wrap: break-word;
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
+    margin: 0 2vw;
 }
 
 textarea.materialize-textarea {
