@@ -7,6 +7,15 @@ export default (state, action) => {
                 roomId: action.payload.roomId,
                 userName: action.payload.userName
             }
+        case 'LEAVE':
+            return {
+                ...state,
+                isAuth: false,
+                roomId: null,
+                userName: null,
+                users: [],
+                messages: []
+            }
         case 'SET_USERS':
             return {
                 ...state,

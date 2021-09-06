@@ -1,63 +1,13 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+@import "~materialize-css/dist/css/materialize.min.css";
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-input {
-    outline: none;
-    border: none;
-}
-
-button {
-    outline: none !important;
-    border: none;
-    background: transparent;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-h1 {
-    margin: 0;
-}
-
-textarea {
-    outline: none;
-    border: none;
-}
-
-textarea:focus, input:focus {
-    border-color: green;
-}
-
-p {
-    margin: 0;
+body > #root > div {
+    height: 100vh;
 }
 
 .app {
-
-    background-image: url('./images/background.jpg');
-    min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
 }
 
 .app::before {
@@ -69,4 +19,36 @@ p {
     height: 100%;
     background: rgba(93, 84, 240, 0.5);
     background: linear-gradient(to right, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
+}
+
+.input-container {
+    border-radius: 2vh;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    padding: 1vh;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 2vh;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track-piece:start {
+    margin-top: 10px
+}
+
+::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 10px
+}
+
+::-webkit-scrollbar-thumb {
+    background: mediumpurple;
+    border-radius: 2vh;
 }

@@ -28,6 +28,11 @@ function App() {
         });
     };
 
+    const onLeave = async () => {
+        dispatch({type: 'LEAVE'});
+        socket.emit('ROOM:DISCONNECT');
+    }
+
     const setUsers = (users) => {
         dispatch({
             type: 'SET_USERS',
@@ -49,7 +54,7 @@ function App() {
 
     return (
         <div className="app">
-            {!state.isAuth ? <Login onLogin={onLogin}/> : <Chat  {...state} onAddMessage={addMessage}/>}
+            {!state.isAuth ? <Login onLogin={onLogin}/> : <Chat  {...state} onAddMessage={addMessage} onLeave={onLeave}/>}
         </div>
     );
 }
