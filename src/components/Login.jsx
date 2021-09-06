@@ -10,6 +10,7 @@ const Login = ({onLogin}) => {
 
     const onEnter = useCallback(async () => {
         if (!/\S/.test(roomId) || !/\S/.test(userName)) {
+            M.Toast.dismissAll();
             M.toast({html: 'Wrong Data'});
             return;
         }
@@ -18,6 +19,15 @@ const Login = ({onLogin}) => {
             userName
         };
         setLoading(true);
+
+        const {data} = await axios.get(`/rooms/${roomId}`);
+        if (data.users.includes(userName)) {
+            M.Toast.dismissAll();
+            M.toast({html: 'This name already taken'});
+            setLoading(false);
+            return;
+        }
+
         await axios.post('/rooms', {
             roomId,
             userName
@@ -27,7 +37,7 @@ const Login = ({onLogin}) => {
 
     useEffect(() => {
         const onKeypress = (event) => {
-            if (event.key === 'Enter') {
+            if (event.key === 'Enter' && !isLoading) {
                 onEnter();
             }
         }
